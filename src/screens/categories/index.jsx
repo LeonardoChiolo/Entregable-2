@@ -6,8 +6,11 @@ import CATEGORIES from '../../constants/data/categories.json';
 import { ORIENTATION } from '../../constants/orientation';
 import useOrientation from '../../hooks/useOrientation';
 
-function Categories({ onSelectCategory }) {
+function Categories({ navigation }) {
   const orientation = useOrientation();
+  const onSelectCategory = ({ categoryId, color, name }) => {
+    navigation.navigate('Products', { categoryId, color, name });
+  };
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
@@ -19,7 +22,11 @@ function Categories({ onSelectCategory }) {
             <CategoryItem
               {...item}
               onSelectCategory={() =>
-                onSelectCategory({ categoryId: item.id, color: item.backgroundColor })
+                onSelectCategory({
+                  categoryId: item.id,
+                  color: item.backgroundColor,
+                  name: item.name,
+                })
               }
               style={orientation === ORIENTATION.LANDSCAPE ? styles.categoryItemLandscape : {}}
             />
