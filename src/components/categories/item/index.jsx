@@ -4,7 +4,7 @@ import { styles } from './styles';
 import { COLORS } from '../../../themes';
 
 const CategoryItem = ({ id, name, backgroundColor, backgroundImage, onSelectCategory, style }) => {
-  //const { width } = useWindowDimensions();
+  // const { width } = useWindowDimensions();
 
   // console.warn({ width });
 

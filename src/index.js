@@ -1,7 +1,9 @@
 import { useFonts } from 'expo-font';
-import { SafeAreaView, StyleSheet, View, ActivityIndicator, LogBox } from 'react-native';
+import { SafeAreaView, StyleSheet, View, ActivityIndicator } from 'react-native';
+import { Provider } from 'react-redux';
 
 import RootNavigator from './navigations';
+import { store } from './store';
 import { FONTS, COLORS } from './themes';
 
 // const categoryDefault = {
@@ -10,12 +12,6 @@ import { FONTS, COLORS } from './themes';
 // };
 
 export default function App() {
-  // Ignore log notification by message
-  LogBox.ignoreLogs(['Warning: ...']);
-
-  //Ignore all log notifications
-  LogBox.ignoreAllLogs();
-
   const [loaded] = useFonts({
     [FONTS.regular]: require('../assets/fonts/Jost-Regular.ttf'),
     [FONTS.bold]: require('../assets/fonts/Jost-Bold.ttf'),
@@ -45,9 +41,11 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <RootNavigator />
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={styles.container}>
+        <RootNavigator />
+      </SafeAreaView>
+    </Provider>
   );
 }
 
