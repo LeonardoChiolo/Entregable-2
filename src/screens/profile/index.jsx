@@ -11,7 +11,6 @@ const Profile = () => {
   const [uploadImageProfile, { data, isLoading, error }] = useUpdateImageProfileMutation();
   const { data: userData, isLoading: isLoadingUserData } = useGetProfileQuery({ localId });
   const onHandlerImage = async ({ uri, base64 }) => {
-    
     await uploadImageProfile({ localId, image: `data:image/jpeg;base64,${base64}` });
   };
 
