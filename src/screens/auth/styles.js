@@ -16,8 +16,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   content: {
-    width: '80%',
-    maxWidth: 400,
+    width: '90%',
+    maxWidth: 500,
     padding: 15,
     margin: 15,
     minHeight: 300,
@@ -36,9 +36,9 @@ export const styles = StyleSheet.create({
   },
   header: {
     fontFamily: FONTS.bold,
-    fontSize: 22,
+    fontSize: 30,
     textAlign: 'center',
-    color: COLORS.text,
+    color: COLORS.secodary,
     paddingVertical: 10,
   },
   linkContainer: {
@@ -60,8 +60,8 @@ export const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: COLORS.secodary,
-    width: 200,
-    height: 35,
+    width: 300,
+    height: 55,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,

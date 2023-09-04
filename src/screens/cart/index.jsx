@@ -56,9 +56,7 @@ const Cart = ({ navigation }) => {
       await createOrder(newOrder);
       dispatch(clearCart());
       navigation.navigate('OrdersTab');
-    } catch (e) {
-      console.warn({ error, e });
-    }
+    } catch (e) { }
   };
 
   if (cart.length === 0) {

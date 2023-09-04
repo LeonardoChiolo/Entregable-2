@@ -1,4 +1,4 @@
-# Coolstore
+# Market
 
 This project was bootstrapped with [Expo](https://expo.dev/).
 

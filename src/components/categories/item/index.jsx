@@ -4,11 +4,7 @@ import { styles } from './styles';
 import { COLORS } from '../../../themes';
 
 const CategoryItem = ({ id, name, backgroundColor, backgroundImage, onSelectCategory, style }) => {
-  // const { width } = useWindowDimensions();
 
-  // console.warn({ width });
-
-  // const isTablet = width > 650;
   return (
     <TouchableHighlight
       onPress={() => onSelectCategory(id)}

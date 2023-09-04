@@ -13,12 +13,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   categoryContainer: {
-    marginTop: 15,
-    marginHorizontal: 15,
+    marginTop: 25,
+    marginHorizontal: 10,
   },
   listCategory: {
-    gap: 15,
-    paddingBottom: 20,
+    gap: 25,
+    paddingBottom: 25,
   },
   categoryItemLandscape: {
     height: 100,

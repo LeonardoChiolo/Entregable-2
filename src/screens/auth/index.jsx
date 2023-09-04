@@ -18,7 +18,7 @@ const initialState = {
 const formReducer = (state, action) => {
   switch (action.type) {
     case UPDATE_FORM:
-      // eslint-disable-next-line no-case-declarations
+    
       const { name, value, hasError, error, touched, isFormValid } = action.data;
       return {
         ...state,
@@ -73,7 +73,7 @@ const Auth = () => {
       <View style={styles.container}>
         <ImageBackground
           source={{
-            uri: 'https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1007&q=80',
+            uri: 'https://firebasestorage.googleapis.com/v0/b/market-39121.appspot.com/o/background%2FFondo.jpg?alt=media&token=a28c741e-9ff2-4045-abbf-3b84c1f743fd',
           }}
           style={styles.imageBackground}
           resizeMode="cover">
